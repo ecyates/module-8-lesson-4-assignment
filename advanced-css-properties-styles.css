@@ -1,0 +1,182 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-color: #c2c4c3;
+}
+
+header {
+    background-image: url('banner.jpg');
+    background-size: cover; 
+    background-position: center; 
+    color: white;
+    padding: 20px; 
+    text-align: center; 
+    display: flex; 
+    flex-direction: row;
+}
+
+h1, h2 { 
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+header p {
+    margin: 5px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 20px;
+    background: purple;
+    color: white;
+    margin-top: 0px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none; 
+    font-size: 18px;
+    padding: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease; 
+}
+
+.nav-link:hover {
+    color: white; 
+    background-color: plum; 
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.container { 
+    display: flex; 
+    justify-content: space-around;
+    margin: 10px
+}
+
+.container h2{
+    padding-left: 10px;
+}
+
+.container p  {
+    padding-left: 15px;
+}
+
+.main-content { 
+    flex-direction: column;  
+}
+
+section, aside { 
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(0,0,0,.3);
+    background-color: #ffffff;
+    padding: 20px 10px;
+    margin: 10px;
+}
+
+aside {
+    max-width: 300px;
+}
+
+blockquote {
+    font-style: italic;
+    color: purple;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: rgb(128, 0, 128);
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    aside {
+        margin-bottom: 0px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    footer {
+        flex-direction: column;
+    }
+    nav {
+        flex-direction: column;
+    }
+}
+
+/* #1 Task 1 - Background Fade */ 
+.background-fade { 
+    background-color: rgba(142, 183, 216, 0.3);
+}
+
+/* #1 Task 2 - Text Shadow */ 
+h1 { 
+    text-shadow: 0 4px 8px rgba(0,0,0,.3)
+}
+
+/* #1 Task 3 - Button Effect */ 
+button { 
+    background-color: rgba(128, 0, 128, .9);
+    color: white;
+    padding: 15px;
+    border: none; 
+    border-radius: 5px;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+}
+
+button:hover { 
+    background-color: rgba(221, 160, 221,.9);
+}
+
+.button-container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #2 Task 1 - Hyperlink Hover */
+a { 
+    color: rgba(128, 0, 128, 1);
+    text-decoration: none;
+}
+
+a:hover { 
+    color: rgba(221, 160, 221, 1);
+    text-decoration: underline;
+}
+
+/* #2 Task 2 - Button Animation When Clicked */
+button:active{
+    animation: clickAnimation 0.3s ease;
+}
+
+@keyframes clickAnimation {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+
+img.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    animation: rotate 10s infinite linear;
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
